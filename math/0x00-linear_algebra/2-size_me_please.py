@@ -14,4 +14,3 @@ def full_shape(matrix, shape):
         return full_shape(matrix[0], shape)
     else:
         return shape
-

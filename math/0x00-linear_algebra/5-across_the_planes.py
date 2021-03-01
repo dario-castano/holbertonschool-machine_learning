@@ -18,4 +18,3 @@ def shape(matrix):
     ncols = len(matrix[0]) if all(list(map(lambda x: len(x) == len(matrix[0]), matrix))) else 0
 
     return (nrows, ncols) if nrows != 0 and ncols != 0 else None
-

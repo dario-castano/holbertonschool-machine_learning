@@ -17,4 +17,3 @@ def cat_matrices2D(mat1, mat2, axis=0):
 def columns_len(matrix):
     """Get the column length of the matrix"""
     return len(matrix[0]) if all(list(map(lambda x: len(x) == len(matrix[0]), matrix))) else None
-

@@ -19,4 +19,3 @@ def matrix_transpose(matrix):
 def zero_matrix(rows, cols):
     """Matrix filled with zeros"""
     return [([0]*cols) for _ in range(rows)]
-

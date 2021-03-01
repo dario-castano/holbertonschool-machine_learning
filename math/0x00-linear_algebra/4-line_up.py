@@ -4,4 +4,9 @@
 
 def add_arrays(arr1, arr2):
     """Adds two lists"""
-    return list(map(lambda x, y: x+y, arr1, arr2)) if len(arr1) == len(arr2) else None
+    return list(map(lambda x, y: x+y, arr1, arr2)) if eq(arr1, arr2) else None
+
+
+def eq(arr1, arr2):
+    """Checks if 2 lists are Equal"""
+    return len(arr1) == len(arr2)

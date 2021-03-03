@@ -5,7 +5,7 @@ make every day, and those decisions are determined by our priorities"""
 
 def summation_i_squared(n):
     """Sum of squares"""
-    if type(n) is int:
+    if type(n) is int and n >= 1:
         return sum(list(map(lambda x: x * x, range(1, n+1))))
     else:
         return None

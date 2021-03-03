@@ -19,12 +19,27 @@ banana_data = fruit[1, :]
 orange_data = fruit[2, :]
 peach_data = fruit[3, :]
 
-apple_plot = plt.bar(range_people, apple_data, 0.5, color=apple_color)
-banana_plot = plt.bar(range_people, banana_data, 0.5, color=banana_color,
+apple_plot = plt.bar(range_people,
+                     apple_data,
+                     0.5,
+                     color=apple_color)
+
+banana_plot = plt.bar(range_people,
+                      banana_data,
+                      0.5,
+                      color=banana_color,
                       bottom=apple_data)
-orange_plot = plt.bar(range_people, orange_data, 0.5, color=orange_color,
+
+orange_plot = plt.bar(range_people,
+                      orange_data,
+                      0.5,
+                      color=orange_color,
                       bottom=apple_data+banana_data)
-peach_plot = plt.bar(range_people, peach_data, 0.5, color=peach_color,
+
+peach_plot = plt.bar(range_people,
+                     peach_data,
+                     0.5,
+                     color=peach_color,
                      bottom=apple_data+banana_data+orange_data)
 
 legend_data = (

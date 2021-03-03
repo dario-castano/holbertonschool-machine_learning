@@ -8,3 +8,6 @@ print(poly_derivative(poly))
 poly2 = [5]
 print(poly_derivative(poly2))
 
+
+poly3 = []
+print(poly_derivative(poly3))

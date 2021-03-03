@@ -4,10 +4,10 @@
 
 def poly_derivative(poly):
     """Polynomial derivative"""
-    if isa_poly(poly):
+    if isa_poly(poly) and len(poly) > 1:
         exponents = list(range(0, len(poly)+1))
         result = list(map(lambda x, y: x*y, poly, exponents))
-        return result[1:] if len(poly) > 1 else [0]
+        return result[1:]
     else:
         return None
 

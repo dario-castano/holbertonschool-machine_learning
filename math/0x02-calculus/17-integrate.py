@@ -7,7 +7,7 @@ def poly_integral(poly, C=0):
     if isa_poly(poly) and isa_number(C):
         exponents = list(range(1, len(poly)+1))
         result = list(map(lambda x, y: trim_float(x/y), poly, exponents))
-        return [C] + result if result != [0] else [0]
+        return [C] + result if result != [0] else [C]
     else:
         return None
 

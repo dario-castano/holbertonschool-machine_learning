@@ -9,4 +9,4 @@ p2 = []
 print(poly_integral(p2))
 
 p3 = [0]
-print(poly_integral(p3))
+print(poly_integral(p3, C=7))

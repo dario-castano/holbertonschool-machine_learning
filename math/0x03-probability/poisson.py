@@ -45,11 +45,18 @@ class Poisson:
         return result
 
     def cdf(self, k):
+        """Cummulative density function"""
         if k <= 0:
             return 0
+
+        def lamda_i_fact(n):
+            return (self.lambtha ** n) / StatFuncs.factorial(n)
+
         x = int(k)
         indexes = range(x + 1)
-        return sum(map(self.pmf, indexes))
+        exp_inv_lambda = 1 / (MathSymbols.e ** self.lambtha)
+        summatory = sum(map(lamda_i_fact, indexes))
+        return exp_inv_lambda * summatory
 
 
 class MathSymbols:

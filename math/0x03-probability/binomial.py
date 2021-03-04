@@ -66,7 +66,8 @@ class Binomial:
         """Cummulative density function"""
         if k < 0:
             return 0
-        indexes = range(k + 1)
+        x = int(k)
+        indexes = range(x + 1)
         probs = map(self.pmf, indexes)
         return sum(probs)
 

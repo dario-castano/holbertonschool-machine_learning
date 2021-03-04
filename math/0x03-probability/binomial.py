@@ -56,9 +56,10 @@ class Binomial:
         """Probability Mass Function"""
         if k < 0:
             return 0
-        combi = StatFuncs.combination(self.n, k)
-        succ = self.p ** k
-        fail = (1 - self.p) ** (self.n - k)
+        x = int(k)
+        combi = StatFuncs.combination(self.n, x)
+        succ = self.p ** x
+        fail = (1 - self.p) ** (self.n - x)
         return combi * succ * fail
 
     def cdf(self, k):

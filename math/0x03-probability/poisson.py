@@ -44,6 +44,13 @@ class Poisson:
         result = (lambda_x * exp_inv_lambda) / x_factorial
         return result
 
+    def cdf(self, k):
+        if k <= 0:
+            return 0
+        x = int(k)
+        indexes = range(x + 1)
+        return sum(map(self.pmf, indexes))
+
 
 class MathSymbols:
     """Math symbols used in calculations"""

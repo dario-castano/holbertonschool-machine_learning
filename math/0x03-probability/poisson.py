@@ -34,6 +34,7 @@ class Poisson:
         self.__lambtha = float(value)
 
     def pmf(self, k):
+        """Probability Mass Function"""
         if k <= 0:
             return 0
         x = int(k)
@@ -54,6 +55,7 @@ class StatFuncs:
     """Some statistical functions"""
     @staticmethod
     def factorial(n, acc=1):
+        """Factorial of a number"""
         if n < 0:
             raise ValueError('parameter must be greater than 0')
         elif n == 0:
@@ -63,6 +65,7 @@ class StatFuncs:
 
     @staticmethod
     def avg(data):
+        """Average of a list"""
         if type(data) != list:
             raise TypeError('parameter must be a list')
         elif len(data) < 1:

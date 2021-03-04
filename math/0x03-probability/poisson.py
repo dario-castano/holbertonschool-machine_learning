@@ -3,6 +3,7 @@
 
 
 class Poisson:
+    """Poisson distribution"""
     def __init__(self, data=None, lambtha=1.):
         if data is None:
             self.lambtha = lambtha
@@ -44,11 +45,13 @@ class Poisson:
 
 
 class MathSymbols:
+    """Math symbols used in calculations"""
     e = 2.7182818285
     pi = 3.1415926536
 
 
 class StatFuncs:
+    """Some statistical functions"""
     @staticmethod
     def factorial(n, acc=1):
         if n < 0:

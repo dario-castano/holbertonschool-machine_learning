@@ -21,7 +21,7 @@ class Normal:
     def data(self, value):
         if type(value) != list:
             raise TypeError('data must be a list')
-        elif len(value) < 1:
+        elif len(value) <= 2:
             raise ValueError('data must contain values')
         self.__data = value
 

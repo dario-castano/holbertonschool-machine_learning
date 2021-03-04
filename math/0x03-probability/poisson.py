@@ -49,20 +49,19 @@ class Poisson:
         if k <= 0:
             return 0
 
-        def lamda_i_fact(n):
-            return (self.lambtha ** n) / StatFuncs.factorial(n)
+        def lambda_i_fact(i):
+            return (self.lambtha ** i) / StatFuncs.factorial(i)
 
         x = int(k)
         indexes = range(x + 1)
         exp_inv_lambda = 1 / (MathSymbols.e ** self.lambtha)
-        summatory = sum(map(lamda_i_fact, indexes))
+        summatory = sum(map(lambda_i_fact, indexes))
         return exp_inv_lambda * summatory
 
 
 class MathSymbols:
     """Math symbols used in calculations"""
     e = 2.7182818285
-    pi = 3.1415926536
 
 
 class StatFuncs:

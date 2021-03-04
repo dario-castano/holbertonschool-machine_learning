@@ -22,7 +22,7 @@ class Normal:
         if type(value) != list:
             raise TypeError('data must be a list')
         elif len(value) <= 2:
-            raise ValueError('data must contain values')
+            raise ValueError('data must contain multiple values')
         self.__data = value
 
     @property
